@@ -29,7 +29,7 @@
 				the_custom_logo();
 			else :
 				?>
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo file_get_contents( get_stylesheet_directory() . '/images/eco-chat.svg' ); ?><span class="screen-reader-text"><?php esc_html_e( 'Home', 'susty' ); ?></span></a>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo file_get_contents( get_stylesheet_directory() . '/images/sunrise.svg' ); ?><span class="screen-reader-text"><?php esc_html_e( 'Home', 'susty' ); ?></span></a>
 				<?php
 			endif;
 			?>
@@ -63,7 +63,7 @@
 				<a href="<?php echo esc_url( ( get_option( 'permalink_structure' ) ? home_url( '/menu/' ) : home_url( '/?menu' ) ) ); ?>"><?php esc_html_e( 'Menu', 'susty' ); ?></a>
 				<?php
 			endif;
-		
+
 		endif;
 		?>
 	</header>
