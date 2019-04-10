@@ -23,7 +23,7 @@
     <link rel="preload"
           as="font"
           type="font/woff2"
-          href="<?php echo get_theme_r . '/fonts/source-sans-pro-v12-latin-700.woff2' ?>"
+          href="<?php echo $template_root_url . '/fonts/source-sans-pro-v12-latin-700.woff2' ?>"
           crossorigin>
 	<?php wp_head(); ?>
 </head>
@@ -34,6 +34,7 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'susty' ); ?></a>
 
 	<header id="masthead">
+        <div class="inner">
 		<div class="logo">
 			<?php
 			if ( has_custom_logo() ) :
@@ -49,11 +50,21 @@
 		<?php
 		if ( is_front_page() && is_home() && ! get_query_var( 'menu' ) ) :
 			?>
-			<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<h1>
+              <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                <div class="org">Sunrise Movement</div>
+                <div class="hub"><?php bloginfo( 'name' ); ?></div>
+              </a>
+            </h1>
 			<?php
 		else :
 			?>
-			<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+			<div class="name">
+              <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                <div class="org">Sunrise Movement</div>
+                <div class="hub"><?php bloginfo( 'name' ); ?></div>
+              </a>
+            </div>
 			<?php
 		endif;
 
@@ -77,6 +88,7 @@
 
 		endif;
 		?>
+    </div>
 	</header>
 
 	<div id="content">

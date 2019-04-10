@@ -22,6 +22,7 @@ Normalizing styles have been helped along thanks to the fine work of Nicolas Gal
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 # Normalize
+# Variables
 # Typography
 # Elements
 # Forms
@@ -385,6 +386,14 @@ template {
 }
 
 /*--------------------------------------------------------------
+# Variables
+--------------------------------------------------------------*/
+:root {
+    --sunrise-charcoal: #33342e;
+    --sunrise-yellow: #ffde16;
+}
+
+/*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
 
@@ -474,6 +483,7 @@ big {
 
 html {
 	box-sizing: border-box;
+  height: 100%;
 }
 
 *,
@@ -484,7 +494,7 @@ html {
 
 body {
 	background-color: #fffefc;
-	border-top: 0.4rem solid;
+  height: 100%;
 }
 
 hr {
@@ -515,7 +525,7 @@ dd {
 }
 
 img {
-	height: auto;
+	height: auto
 	max-width: 100%;
 }
 
@@ -861,23 +871,38 @@ object {
 ## Header
 --------------------------------------------------------------*/
 header#masthead {
-	display: flex;
-	align-items: center;
-	max-width: 69em;
-	margin: 2em auto;
-	padding: 0 1em;
+  background-color: var(--sunrise-charcoal);
 }
 
-header#masthead h1, header#masthead p {
+header#masthead .inner {
+  display: flex;
+  align-items: center;
+  padding: 1em;
+  max-width: 69em;
+  margin: 0 auto;
+}
+
+header#masthead .org {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 0.9em;
+}
+header#masthead .hub {
+  font-size: 1.5em;
+}
+
+header#masthead h1, header#masthead .name {
 	font-size: 1em;
-	line-height: 1em;
-	font-weight: bold;
+  line-height: 1;
+	font-weight: 700;
 	flex: 1;
 	margin: 0;
 }
 
 header#masthead a {
+  display: inline-block;
 	border-bottom: unset;
+  color: var(--sunrise-yellow);
 }
 
 header#masthead > a {
@@ -885,7 +910,7 @@ header#masthead > a {
 }
 
 header#masthead > a > svg {
-	width: 1.8em;
+  width: 1.8em;
 	height: 1.8em;
 }
 
@@ -893,12 +918,13 @@ header#masthead > a > svg {
 	flex: 0 0 2.4em;
 	text-align: center;
 	line-height: 0;
-	margin-right: .5em;
+  margin-right: .5em;
 }
 
 .logo svg {
 	width: 2.4em;
 	height: 2.4em;
+  fill: var(--sunrise-yellow);
 }
 
 svg * {
@@ -909,10 +935,15 @@ svg * {
 /*--------------------------------------------------------------
 ## Content
 --------------------------------------------------------------*/
+#page {
+  height: 100%;
+}
+
 #content {
 	max-width: 33em;
 	margin: 0 auto;
 	padding: 0 1em;
+  min-height: calc(100% - 10em);
 }
 
 article a, nav a {
@@ -951,8 +982,8 @@ article > header > h1, article > header > h2 {
 
 footer#colophon {
 	max-width: 69em;
-	margin: 3em auto;
+	margin: 0 auto;
 	text-align: center;
-	padding: 0 1em;
+	padding: 2em 1em;
 	font-size: .75em;
 }
