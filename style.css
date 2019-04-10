@@ -877,8 +877,9 @@ header#masthead {
 header#masthead .inner {
   display: flex;
   align-items: center;
-  padding: 1em;
-  max-width: 69em;
+  padding: 0 1em;
+  height: 4.4em;
+  max-width: 60em;
   margin: 0 auto;
 }
 
@@ -940,10 +941,10 @@ svg * {
 }
 
 #content {
-	max-width: 33em;
+	max-width: 60em;
 	margin: 0 auto;
-	padding: 0 1em;
-  min-height: calc(100% - 10em);
+	padding: 1em 1em;
+  min-height: calc(100% - 8.6em);
 }
 
 article a, nav a {
@@ -981,9 +982,10 @@ article > header > h1, article > header > h2 {
 }
 
 footer#colophon {
-	max-width: 69em;
+	max-width: 60em;
 	margin: 0 auto;
 	text-align: center;
 	padding: 2em 1em;
 	font-size: .75em;
+  height: 5.6em;
 }
