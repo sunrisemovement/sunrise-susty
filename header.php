@@ -48,12 +48,13 @@
 		</div>
 
 		<?php
+        $hub_name = trim(str_replace('Sunrise Movement', '', get_bloginfo('name')));
 		if ( is_front_page() && is_home() && ! get_query_var( 'menu' ) ) :
 			?>
 			<h1>
               <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
                 <div class="org">Sunrise Movement</div>
-                <div class="hub"><?php bloginfo( 'name' ); ?></div>
+                <div class="hub"><?php echo $hub_name; ?></div>
               </a>
             </h1>
 			<?php
@@ -62,7 +63,7 @@
 			<div class="name">
               <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
                 <div class="org">Sunrise Movement</div>
-                <div class="hub"><?php bloginfo( 'name' ); ?></div>
+                <div class="hub"><?php echo $hub_name; ?></div>
               </a>
             </div>
 			<?php
