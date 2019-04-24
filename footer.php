@@ -20,7 +20,7 @@
 		<span> | </span>
 			<?php
 			/* translators: 1: Theme name, 2: Theme author. */
-			printf( esc_html__( 'Theme: %1$s by %2$s.', 'susty' ), '<a href="https://github.com/sunrisemovement/susty">Susty</a>', '<a href="https://sunrisemovement.org">Sunrise Movement</a>' );
+			printf( esc_html__( 'Theme: %1$s by %2$s.', 'susty' ), '<a href="https://github.com/sunrisemovement/sunrise-susty">Sunrise Susty</a>', '<a href="https://sunrisemovement.org">Sunrise Movement</a>' );
 			?>
 	</footer>
 </div>
