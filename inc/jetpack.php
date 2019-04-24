@@ -33,7 +33,6 @@ function susty_wp_jetpack_setup() {
 			'categories' => '.cat-links',
 			'tags'       => '.tags-links',
 			'author'     => '.byline',
-			'comment'    => '.comments-link',
 		),
 		'featured-images' => array(
 			'archive'    => true,

@@ -53,17 +53,9 @@ if ( ! function_exists( 'susty_setup' ) ) :
 		 */
 		add_theme_support( 'html5', array(
 			'search-form',
-			'comment-form',
-			'comment-list',
 			'gallery',
 			'caption',
 		) );
-
-		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'susty_custom_background_args', array(
-			'default-color' => 'fffefc',
-			'default-image' => '',
-		) ) );
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );

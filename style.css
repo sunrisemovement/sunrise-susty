@@ -493,7 +493,7 @@ html {
 }
 
 body {
-	background-color: #fffefc;
+	background-color: #fff;
   height: 100%;
 }
 
@@ -626,9 +626,8 @@ textarea {
 # Links
 --------------------------------------------------------------*/
 a {
-	color: rgb(4, 4, 2);
-	text-decoration: none;
-	border-bottom: 0.2em solid transparent;
+	text-decoration: underline;
+  color: currentColor;
 }
 
 a#susty-back-link {
@@ -636,13 +635,6 @@ a#susty-back-link {
 }
 
 a:visited {
-	color: rgb(4, 4, 2);
-}
-
-a:hover, a:focus, a:active {
-	/*color: midnightblue;*/
-	border-bottom-style: solid;
-	border-bottom-color: inherit;
 }
 
 a:focus {
@@ -900,9 +892,44 @@ header#masthead h1, header#masthead .name {
 	margin: 0;
 }
 
+header#masthead .header-menu-link {
+  display: none;
+}
+
+header#masthead .header-navigation {
+  display: block;
+}
+
+header#masthead .header-navigation ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+header#masthead .header-navigation li {
+  margin: 0 0.5em;
+}
+
+header#masthead .header-navigation li.current-menu-item a,
+header#masthead .header-navigation li a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  header#masthead .header-menu-link {
+    display: inline-block;
+  }
+  header#masthead .header-navigation {
+    display: none;
+  }
+}
+
 header#masthead a {
   display: inline-block;
-	border-bottom: unset;
+	text-decoration: none;
   color: var(--sunrise-yellow);
 }
 
@@ -943,20 +970,18 @@ svg * {
 #content {
 	max-width: 60em;
 	margin: 0 auto;
-	padding: 1em 1em;
+	padding: 2em 1em;
   min-height: calc(100% - 8.6em);
-}
-
-article a, nav a {
-	background: rgb(252, 248, 243) none repeat scroll 0% 0%;
-	border-bottom: 0.1em dotted;
-	line-height: 1.6em;
 }
 
 article > header > h1, article > header > h2 {
 	font-size: 2.4em;
 	line-height: 1em;
 	margin: 0 0 .4em 0;
+}
+
+article > header > h2 {
+  font-size: 2.0em;
 }
 
 .entry-meta {
@@ -977,8 +1002,7 @@ article > header > h1, article > header > h2 {
 }
 
 .cat-links a, .comments-link a, .edit-link a {
-	padding: 0 .5em;
-	margin: 0 .5em 0 0;
+	margin-right: .5em;
 }
 
 footer#colophon {

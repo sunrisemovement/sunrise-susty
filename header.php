@@ -70,7 +70,15 @@
 		endif;
 
 		if ( has_nav_menu( 'menu-1' ) ) :
-
+            ?>
+            <nav class="header-navigation">
+                <?php
+                    wp_nav_menu(array(
+                        'theme_location' => 'menu-1'
+                    ));
+                ?>
+            </nav>
+            <?php
 			if ( get_query_var( 'menu' ) ) :
 				?>
 				<a id="susty-back-link" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">&#x2716;<span class="screen-reader-text"><?php esc_html_e( 'Close menu', 'susty' ); ?></span></a>
@@ -83,7 +91,7 @@
 				<?php
 			else :
 				?>
-				<a href="<?php echo esc_url( ( get_option( 'permalink_structure' ) ? home_url( '/menu/' ) : home_url( '/?menu' ) ) ); ?>"><?php esc_html_e( 'Menu', 'susty' ); ?></a>
+				<a class="header-menu-link" href="<?php echo esc_url( ( get_option( 'permalink_structure' ) ? home_url( '/menu/' ) : home_url( '/?menu' ) ) ); ?>"><?php esc_html_e( 'Menu', 'susty' ); ?></a>
 				<?php
 			endif;
 
