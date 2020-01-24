@@ -390,7 +390,11 @@ template {
 --------------------------------------------------------------*/
 :root {
     --sunrise-charcoal: #33342e;
-    --sunrise-yellow: #ffde16;
+	--sunrise-yellow: #ffde16;
+	--sunrise-lgreen: #e3eddf;
+	--sunrise-orange: #fd9014;
+	--sunrise-purple: #8f0d56;
+	--sunrise-red: #EF4C39;
 }
 
 /*--------------------------------------------------------------
