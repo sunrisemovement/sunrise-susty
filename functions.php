@@ -76,8 +76,6 @@ if ( ! function_exists( 'susty_setup' ) ) :
 	}
 endif;
 add_action( 'after_setup_theme', 'susty_setup' );
-/* try to make HTML validators happy? */
-add_action( 'after_setup_theme', 'register_html_support' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
