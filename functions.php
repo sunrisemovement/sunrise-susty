@@ -49,12 +49,14 @@ if ( ! function_exists( 'susty_setup' ) ) :
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
-		 * to output valid HTML5.
+		 * to output valid HTML5. Also script and style!
 		 */
 		add_theme_support( 'html5', array(
 			'search-form',
 			'gallery',
 			'caption',
+			'script',
+			'style',
 		) );
 
 		// Add theme support for selective refresh for widgets.
@@ -74,6 +76,8 @@ if ( ! function_exists( 'susty_setup' ) ) :
 	}
 endif;
 add_action( 'after_setup_theme', 'susty_setup' );
+/* try to make HTML validators happy? */
+add_action( 'after_setup_theme', 'register_html_support' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
