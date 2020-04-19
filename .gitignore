@@ -2,3 +2,4 @@ tags
 vendor/
 .wordpress_source/
 .DS_Store
+.vscode/
