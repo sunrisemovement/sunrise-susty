@@ -41,7 +41,7 @@
 				the_custom_logo();
 			else :
 				?>
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo file_get_contents( get_stylesheet_directory() . '/images/sunrise.svg' ); ?><span class="screen-reader-text"><?php esc_html_e( 'Home', 'susty' ); ?></span></a>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img alt="Sunrise Movement logo" src="<?php echo esc_url( get_template_directory_uri() . '/images/sunrise.svg' ); ?>"><span class="screen-reader-text"><?php esc_html_e( 'Home', 'susty' ); ?></span></a>
 				<?php
 			endif;
 			?>
